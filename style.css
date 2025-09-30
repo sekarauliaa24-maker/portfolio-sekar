@@ -1,0 +1,544 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.Logo {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 12px; /* Sudut melengkung, lebih aesthetic */
+  box-shadow: 0 2px 8px rgba(47,133,90,0.18); /* Bayangan hijau lembut */
+  margin-right: 18px;
+  background: #fff;
+  border: 2px solid #e2e8f0; /* Border tipis abu-abu muda */
+  transition: box-shadow 0.3s;
+}
+
+.Logo:hover {
+  box-shadow: 0 4px 16px rgba(47,133,90,0.28);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Logo kiri, nav kanan */
+  padding: 1rem 2rem;
+  background: #2f855a;
+  color: white;
+}
+
+/* Burger button style */
+.navbar-burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+  user-select: none;
+  /* Sembunyikan di desktop */
+}
+
+.navbar-burger span {
+  display: block;
+  height: 3px;
+  background: whitesmoke;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+  transform-origin: center;
+}
+
+/* Animasi berubah jadi X saat dicek */
+.menu-toggle:checked + .navbar-burger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle:checked + .navbar-burger span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle:checked + .navbar-burger span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hide nav links di mobile */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  position: absolute;
+  top: 50px; /* sesuaikan dengan tinggi header */
+  right: 10px;
+  width: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+/* Tampilkan nav links saat dicek */
+.menu-toggle:checked ~ nav .nav-links {
+  display: flex;
+}
+
+/* Style item nav */
+.nav-links li {
+  list-style: none;
+  padding: 10px 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+/* Responsif desktop */
+@media (min-width: 768px) {
+  /* Sembunyikan burger */
+  .navbar-burger {
+    display: none;
+  }
+  /* Tampilkan nav links secara horizontal */
+  .nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    width: auto;
+    box-shadow: none;
+  }
+  .nav-links li {
+    padding: 0 15px;
+  }
+}
+
+/* Nav links desktop overrides */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #c6f6d5;
+}
+
+section {
+  padding: 2rem;
+  scroll-margin-top: 100px; /* Tambahan agar section tidak tertutup header saat scroll */
+}
+
+.hero {
+  background: #fef7ec;
+  text-align: center;
+  padding: 3rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #2f855a;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.project-card, .edu-item, .contact-info {
+  background: white;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.project-card img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #2f855a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.foto-home {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center; /* Vertikal tengah */
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.foto-about {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px; /* Ubah dari 50% ke 8px untuk sudut sedikit melengkung */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.about-wrapper > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Tambahan CSS untuk Education Section */
+.education-list {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.edu-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edu-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Bagian About */
+.about-wrapper {
+  display: flex;
+  align-items: center; /* Vertikal tengah */
+  gap: 32px;
+  justify-content: flex-start; /* Foto kiri, teks kanan */
+  max-width: 700px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about-wrapper > div.content {
+  flex: 1;
+  min-width: 200px;
+  font-family: 'Arial', sans-serif; /* Ganti font sesuai keinginan */
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-wrapper > div.image {
+  flex-shrink: 0;
+}
+
+.about-wrapper img.foto-about {
+  width: 160px; /* Ukuran foto diperbesar */
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%; /* Membuat bulat */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  background: linear-gradient(135deg, #38a169, #68d391); /* Gradasi hijau */
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 600px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-wrapper img.foto-about {
+    margin: 0 auto 12px auto;
+  }
+}
+
+
+
+/* Contact Section */
+.contact-card {
+  background: #fffbea;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(47,133,90,0.10);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+  border: 2px solid #e2e8f0;
+}
+
+.contact-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(47,133,90,0.15);
+  background: #fff;
+}
+
+.contact-detail {
+  flex: 1;
+}
+
+.contact-detail p {
+  margin: 0 0 10px 0;
+}
+
+.contact-social {
+  margin-top: 10px;
+}
+
+.contact-social a {
+  color: #2f855a;
+  font-size: 1.5rem;
+  margin-right: 12px;
+  transition: color 0.2s;
+}
+
+.contact-social a:hover {
+  color: #68d391;
+}
+
+/* Contact Form for Book Section */
+.contact-form-book {
+  background: #fffbea;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(47,133,90,0.10);
+  padding: 2rem 1.5rem;
+  max-width: 400px;
+  margin: 2rem auto 0 auto;
+  border: 2px solid #e2e8f0;
+}
+
+.contact-form-book form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form-book input,
+.contact-form-book textarea {
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #c6f6d5;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  background: #fff;
+  resize: none;
+}
+
+.contact-form-book textarea {
+  min-height: 90px;
+}
+
+.contact-form-book button {
+  background: #2f855a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form-book button:hover {
+  background: #38a169;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px; /* Jarak antar ikon */
+  margin: 18px 0;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: #b7e5b4; /* Warna matcha */
+  color: #2f855a; /* Hijau tua untuk ikon */
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(47,133,90,0.10);
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: #a3d9a5; /* Matcha lebih tua saat hover */
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 600px) {
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .foto-about {
+    margin-bottom: 12px;
+  }
+  .about-wrapper > div {
+    min-width: unset;
+  }
+  .contact-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 1rem;
+  }
+  .contact-img {
+    margin-bottom: 8px;
+  }
+  .contact-form-book {
+    padding: 1rem;
+    max-width: 98%;
+  }
+}
+
+/* Responsive untuk layar menengah kecil */
+@media (max-width: 700px) {
+  .education-list {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .edu-item {
+    width: 90%;
+    max-width: 300px;
+  }
+  .about-books {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .book-card {
+    width: 90%;
+    max-width: 350px;
+  }
+  .projects-list {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .project-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+/* Projects Section */
+#projects {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 2rem 0;
+}
+
+.projects-list {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(47,133,90,0.07);
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card img {
+  width: 100%;
+  max-width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(47,133,90,0.10);
+}
+
+.project-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2f855a;
+  text-align: center;
+}
+
+.project-content p {
+  text-align: center;
+  color: #555;
+  margin: 0;
+}
