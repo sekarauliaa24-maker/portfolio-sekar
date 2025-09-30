@@ -1,187 +1,253 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Sekar</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>My Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+      <script src="script.js"></script>
+      <php src="login.php"></php>  
 </head>
-
 <body>
-  <!-- 🔷 NAVBAR -->
-  <header>
-  <nav class="navbar">
-    <img src="Sekar. (1).png" class="Logo" alt="Logo Sekar">
+    <header>
+       <a href="#" class="logo">Sekar</a>
 
-    <label class="navbar-burger" id="navbar-burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
+       
+    <!-- Checkbox toggle -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">☰</label>
+
+      
+         <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#portofolio">Portofolio</a>
+            <a href="#contact">Contact</a>
+         </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-img">
+              <img src="images/lp3-removebg-preview.png" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Sekar Aulia</span></h1>
+            <h3 class="typing-text">I'am <span></span></h3>
+            <p> A student at MAKN Ende, majoring in Software Engineering. I am passionate about coding and web development, and I enjoy creating innovative solutions through technology.</p>
+            <div class="sosial-icons">
+                <a href="https://www.facebook.com/profile.php?id=100081773751543&locale=id_ID"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/sekar_toby/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@sekaraulia384"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://github.com/sekarauliaa24-maker"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <a href="https://www.canva.com/design/DAGvRnjOrHw/3PYFmA8tN-26co-RZg9WtA/edit" class="btn">Download CV</a>
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/sekar.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>I'm Sekar, a Software Engineering Student</h3>
+            <p>I am a dedicated and enthusiastic student at MAKN Ende, specializing in Software Engineering. My passion lies in coding and web development, where I strive to create innovative solutions through technology. I am committed to continuous learning and growth in the ever-evolving field of software engineering.</p>
+            <a href="Read.html" class="btn">Read More</a>
+        </div>
+        
+    </section>
+
+   <section class="education" id="education">
+  <h2 class="heading">My <span>Education</span></h2>
   
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Pendidikan</a></li>
-      <li><a href="#projects">Project</a></li>
-      <li><a href="#contact">Kontak</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <!-- 🔷 HOME -->
-  <section id="home" class="hero">
-    <div class="intro">
-      <img src="p.jpg" alt="Foto Sekar" class="foto-home"> <!-- Tambahkan ini -->
-      <h1>I'am Sekar <span>Aulia Putri Al Fajri</span></h1>
-      <p>Website Portofolio saya – Siswa MAKN Ende (X PPLG 1)</p>
-      <div class="social-icons">
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-      </div>
-      <a href="https://www.canva.com/design/DAGvRnjOrHw/3PYFmA8tN-26co-RZg9WtA/edit?utm_content=DAGvRnjOrHw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn">Download CV</a>
+  <div class="education-container">
+    
+    <!-- Box 1 -->
+    <div class="education-box">
+      <img src="images/sma.png" alt="">
+      <h3>2019 - 2022</h3>
+      <h2>Junior High School</h2>
+      <h4>SMPN 1 Atap Tikatukang</h4>
+      <p>
+        Completed my junior high school education at SMPN 1 Atap Tikatukang,
+        where I developed a strong foundation in various subjects and cultivated
+        my interest in technology and software development.
+      </p>
     </div>
-  </section>
 
-  <!-- 🔷 ABOUT -->
-<section id="about">
-  <h2><center>Halo! Saya Sekar</center></h2>
-  <div class="about-wrapper">
-    <div class="content">
-      <div class="book-card">
-        <div class="book-content">
-          <h3><center>Tentang Saya</center></h3>
-          <p>
-            Saya seorang Pelajar dari MAKN Ende. Saya berasal dari Adonara, Flores Timur. Saya suka membaca, menyanyi, memasak, dan punya cita-cita menjadi programmer yang sukses 🌱
-          </p>
+    <!-- Box 2 -->
+    <div class="education-box">
+      <img src="images/sma.png" alt="">
+      <h3>2022 - Now</h3>
+      <h2>Senior High School</h2>
+      <h4>MAKN Ende</h4>
+      <p>
+        Currently pursuing my senior high school education at MAKN Ende,
+        specializing in Software Engineering. I am actively engaged in learning
+        advanced programming concepts and honing my skills in web development.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+    <h2 class="heading">My <span>Services</span></h2>
+    <div class="services-container">
+        <div class="services-box">
+            <i class="fa-solid fa-code"></i>
+            <h3>Web Development</h3>
+            <p>I create responsive and user-friendly websites using the latest web technologies to ensure optimal performance and user experience.</p>
+             <a href="#">Read More</a>
+        </div>
+        <div class="services-box">
+            <i class="fa-solid fa-paintbrush"></i>
+            <h3>UI/UX Design</h3>
+            <p>I design intuitive and visually appealing user interfaces that enhance user engagement and satisfaction.</p>
+              <a href="#">Read More</a>
+          </div>
+        <div class="services-box">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <h3>Mobile App Development</h3>
+            <p>I develop mobile applications that are efficient, scalable, and tailored to meet the specific needs of users.</p>
+              <a href="#">Read More</a>
+          </div>
+    </div>
+</section>
+
+<section class="skills" id="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
+    <div class="skills-container">
+        <div class="skills-box">
+            <h3>HTML</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+            <h3>CSS</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+            <h3>JavaScript</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+            <h3>PHP</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+            <h3>Netbeans Java</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+        </div>
+
+        <div class="professional-skills">
+            <div class="circular-skill">
+                <div class="circular-progress"><span>90%</span></div>
+                <p>Team Work</p>
+            </div>
+            <div class="circular-skill">
+                <div class="circular-progress"><span>80%</span></div>
+                <p>Creativity</p>
+            </div>
+            <div class="circular-skill">
+                <div class="circular-progress"><span>75%</span></div>
+                <p>Communication</p>
+            </div>
+            <div class="circular-skill">
+                <div class="circular-progress"><span>75%</span></div>
+                <p>Problem Solving</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- 🔷 PROJECT -->
+  <section class="portofolio" id="portofolio">
+    <center><h1 class="heading">My <span>Portfolio</span></h1></center>
+    <div class="portfolio-box">
+      <div class="portfolio-card">
+      <img src="images/kalkulator digtal.png" alt="Digital Calculator">
+      <h3>Digital Calculator</h3>
+      <p>A simple digital calculator application built using HTML, CSS, and JavaScript to perform
+        basic arithmetic operations.</p>
+      <a href="kalkulator-digital/index.html" class="btn" target="_blank">View Project</a>
+    </div>
+
+    <div class="portfolio-card">
+      <img src="images/balcamiq.png" alt="Balsamiq">
+      <h3>Balsamiq Wireframe</h3>
+      <p>A wireframe design created using Balsamiq to illustrate the layout and structure
+        of a web application.</p>
+        <a href="web-biodata/index.html" class="btn" target="_blank">View Project</a>
+    </div>
+
+    <div class="portfolio-card">
+      <img src="images/web bb.png" alt="Bb Web">
+      <h3>Web Biodata</h3>
+      <p>A personal biodata website developed using HTML and CSS to showcase my profile,  
+        skills, and projects.</p> 
+        <a href="web-bb/index.html" class="btn" target="_blank">View Project</a>
+    </div>
+
+    <div class="portfolio-card">
+      <img src="images/UI UX.png" alt="Ux Ui">
+      <h3>UI/UX Design</h3>
+      <p>A user interface and user experience design project focusing on creating intuitive 
+        and visually appealing designs for web and mobile applications.</p>
+        <a href="UI-UX/index.html" class="btn" target="_blank">View Project</a>
+    </div>
+
+    <div class="portfolio-card">
+      <img src="images/biodata java.png" alt="java Biodata">
+      <h3>Biodata Java</h3>
+      <p>A biodata application developed using Java in NetBeans IDE to manage and display personal
+        information in a structured format.</p>
+        <a href="biodata-java/index.html" class="btn" target="_blank">View Project</a>
+    </div>
+
+    <div class="portfolio-card">
+      <img src="images/imput nilai.png" alt="Nilai Imput">
+      <h3>Input Nilai</h3>
+      <p>An application for inputting and managing student<br>
+         grades, developed using Java in NetBeans IDE.</p>
+        <a href="imput-nilai/index.html" class="btn" target="_blank">View Project</a>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="heading">My <span>Contant</span></h2>
+    <div class="contact-container">
+    <div class="contact-left">
+      <p></p>
+      <div class="contact-info">
+        <div class="info-block">
+          <div class="icon">📍</div>
+          <div>
+            <h4>Address</h4>
+            <p>4671 Tikatukang<br>Adonara, Flotim, 55060</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <p>0853-6325-6597</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="icon">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p>sekaraulia@gmail.com</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="image">
-      <img src="a.jpg" alt="Foto Sekar" class="foto-about" />
+    <div class="contact-right">
+      <h3>Send Message</h3>
+      <form id="contact-form">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Type your Message..." required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </div>
   </div>
 </section>
 
-
-  <!-- 🔷 EDUCATION -->
-   <div class="school-images">
-</div>
-  <section id="education">
-  <h2><center>Pendidikan</center></h2>
-  <div class="education-list">
-    <div class="edu-item">
-      <img src="sd.png" alt="MIN 3 Flores Timur" class="edu-img">
-      <h3>MIN 3 Flotim</h3>
-      <p>Jenjang SD di MIN 3 Flotim selama 6 tahun.</p>
-    </div>
-    <div class="edu-item">
-      <img src="smp.png" alt="SMPN 1 Atap Tikatukang" class="edu-img">
-      <h3>SMPN 1 Atap Tikatukang</h3>
-      <p>SMP selama 3 tahun penuh semangat dan prestasi.</p>
-    </div>
-    <div class="edu-item">
-      <img src="sma.png" alt="MAKN Ende" class="edu-img">
-      <h3>MAKN Ende</h3>
-      <p>Saat ini saya belajar di jurusan PPLG untuk menjadi ahli teknologi.</p>
-    </div>
-  </div>
-</section>
-
-  <!-- 🔷 PROJECT -->
-  <section id="projects">
-  <h2><center>Project</center></h2>
-  <div class="projects-list">
-    <div class="project-card">
-    <img src="Wb.png" alt="Web Portovolio">
-      <div class="project-content">
-        <h3>Web Portofolio</h3>
-        <p>Dibuat dengan html dan css.</p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="kalkulator digtal.png" alt="Kalkulator Java">
-      <div class="project-content">
-        <h3>Kalkulator Java</h3>
-        <p>Dibuat dengan NetBeans untuk operasi aritmatika dasar.</p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="biodata java.png" alt="Biodata Java">
-      <div class="project-content">
-        <h3>Biodata Java</h3>
-        <p>Saya membuat Biodata Java menggunakan Java dan NetBeans.</p>
-      </div>
-    </div>
-
-     <div class="project-card">
-      <img src="balcamiq.png" alt="Balsamiq">
-      <div class="project-content">
-        <h3>Balsamiq</h3>
-        <p>Saya membuat Web Pendaftaran MAN Unggulan ini menggunakan Balsamiq.</p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="UI UX.png" alt="UI-UX">
-      <div class="project-content">
-        <h3>UI-UX</h3>
-        <p>Saya membuat web Rumah Kesehatan Sekar ini menggunakan Figma yaitu desain UI UX.</p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="web buku.png" alt="UI-UX">
-      <div class="project-content">
-        <h3>Web Buku</h3>
-        <p>Saya membuat Web buku ini menggunakan Html.</p>
-      </div>
-    </div>
-
-     <div class="project-card">
-      <img src="imput nilai.png" alt="Exsel Input Nilai">
-      <div class="project-content">
-        <h3>Input Nilai Exsel</h3>
-        <p>Input nilai ini saya buat menggunakan Exsel.</p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="web bb.png" alt="Web Portovolio responsif">
-      <div class="project-content">
-        <h3>Web Portovolio responsif</h3>
-        <p>Web ini dibuat dengan html dan css</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- 🔷 CONTACT -->
-  <section id="contact">
-  <h2><center>Kontak Saya</center></h2>
-  <div class="contact-card">
-    <img src="p.jpg" alt="Foto Kontak Sekar" class="contact-img">
-    <div class="contact-detail">
-      <p><strong>Alamat:</strong> Adonara, Flores Timur</p>
-      <p><strong>Email:</strong> example@email.com</p>
-      <p><strong>Telepon:</strong> +62 812 3456 7890</p>
-      <div class="contact-social">
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-  <footer>
-    <p>&copy; 2025 Portofolio Sekar</p>
-  </footer>
 </body>
 </html>
